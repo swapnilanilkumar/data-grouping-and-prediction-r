@@ -1,0 +1,7 @@
+library(rpart)
+data(mtcars)
+mtcars$am <- factor(mtcars$am)
+dt <- rpart(am ~ mpg + hp + wt + cyl, data=mtcars)
+print(dt)
+plot(dt)
+text(dt)
